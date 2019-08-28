@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form asp-action="TypeIdent">
+    <h3>Person or Planet?</h3>
+    <select name="perpan">
+        <option value="Person">Person</option>
+        <option value="Planet">Planet</option>
+    </select>
+    <input type="button" value="Submit" class="btn btn-secondary" />
+</form>
