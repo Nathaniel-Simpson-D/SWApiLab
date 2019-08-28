@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewData["Title"] = "SelectPerson";
+}
+@using SWApiLab23.Models
+@model RootPersonArr
+@{ 
+    int i = 1;
+}
+<h1>SelectPerson</h1>
+<form action="/Home/DisplayPerson" method="post">
+    <select name="id" >
+        @foreach (var person in Model.results)
+        {
+            
+            <option value="@i">@person.name</option>
+            i++;
+        }
+    </select>
+    <input type="submit" value="Select" class="btn btn-primary" />
+</form>

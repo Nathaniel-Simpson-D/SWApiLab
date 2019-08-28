@@ -1,0 +1,95 @@
+﻿@model SWApiLab23.Models.RootPlanet
+
+@{
+    ViewData["Title"] = "DisplayPlanet";
+}
+
+<h1>DisplayPlanet</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.rotation_period)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.orbital_period)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.diameter)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.climate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gravity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.terrain)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.surface_water)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.population)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.edited)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.url)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.rotation_period)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.orbital_period)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.diameter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.climate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.gravity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.terrain)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.surface_water)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.population)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.edited)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.url)
+            </td>
+            
+        </tr>
+
+    </tbody>
+</table>

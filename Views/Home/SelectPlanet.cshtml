@@ -1,0 +1,23 @@
+﻿
+@{
+    ViewData["Title"] = "SelectPlanet";
+}
+
+
+@using SWApiLab23.Models
+@model RootPlanetArr
+@{
+    int i = 2;
+}
+    <h1>Select Planet</h1>
+<form action="/Home/DisplayPlanet" method="post">
+    <select name="id">
+        @foreach (var planet in Model.results)
+        {
+
+            <option value="@i">@planet.name</option>
+            i++;
+        }
+    </select>
+    <input type="submit" value="Select" class="btn btn-primary" />
+</form>

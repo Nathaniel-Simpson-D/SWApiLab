@@ -1,0 +1,95 @@
+﻿@model SWApiLab23.Models.RootPerson
+
+@{
+    ViewData["Title"] = "DisplayPerson";
+}
+
+<h1>DisplayPerson</h1>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.height)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.mass)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.hair_color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.skin_color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.eye_color)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.birth_year)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.gender)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.homeworld)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.created)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.edited)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.url)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.height)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.mass)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.hair_color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.skin_color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.eye_color)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.birth_year)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.gender)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.homeworld)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.created)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.edited)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => modelItem.url)
+            </td>
+            
+        </tr>
+}
+    </tbody>
+</table>

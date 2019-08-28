@@ -28,5 +28,7 @@ C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\SWApiLab23.Views.pdb
 C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\SWApiLab23.dll
 C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\SWApiLab23.pdb
 C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\SWApiLab23.csproj.CopyComplete
-C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\Razor\Views\PlaceHolder\Index.g.cshtml.cs
-C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\Razor\Views\PlaceHolder\Create.g.cshtml.cs
+C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\Razor\Views\Home\SelectPerson.g.cshtml.cs
+C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\Razor\Views\Home\DisplayPerson.g.cshtml.cs
+C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\Razor\Views\Home\SelectPlanet.g.cshtml.cs
+C:\CLabs\SWApiLab23\obj\Debug\netcoreapp2.2\Razor\Views\Home\DisplayPlanet.g.cshtml.cs

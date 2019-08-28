@@ -13,26 +13,55 @@ namespace SWApiLab23.Controllers
     public class HomeController : Controller
     {
         
-        public async Task<SWApiLab23.ModelsRootPerson> GetRootPerson()
+        public async Task<RootPersonArr> GetRootPerson()
         {
-           
             var client = new HttpClient();
-            client.BaseAddress = new Uri("http https://swapi.co/api/people/1/");//Get From WebSite
-            var YourKey = "1ef43060-a6c9-492b-ad8d-81debae3bea0";
-            client.DefaultRequestHeaders.Add("x-api-key", YourKey);
+            
+           
+           client.BaseAddress = new Uri("https://swapi.co/api/people/");
+            var response = await client.GetAsync($"");
+            
+            
+            var person = await response.Content.ReadAsAsync<RootPersonArr>();
 
-            var response = await client.GetAsync($"/v1/breeds?attach_breed=0");
-            var jsonData = response.Content.ToString();
+            return person;
+        }
+        public async Task<RootPerson> GetRootPerson(int id)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri($"https://swapi.co/api/people/{id}/?format=json");
+            var response = await client.GetAsync($"");
+            var person = await response.Content.ReadAsAsync<RootPerson>();
 
-            var catObject = await response.Content.ReadAsAsync<RootPerson>();
+            return person;
+        }
+        public async Task<RootPlanetArr> GetRootPlanet()
+        {
+            var client = new HttpClient();
 
-            return catObject;
+
+            client.BaseAddress = new Uri("https://swapi.co/api/planets/");
+            var response = await client.GetAsync($"");
+
+
+            var person = await response.Content.ReadAsAsync<RootPlanetArr>();
+
+            return person;
+        }
+        public async Task<RootPlanet> GetRootPlanet(int id)
+        {
+            var client = new HttpClient();
+            client.BaseAddress = new Uri($"https://swapi.co/api/planets/{id}/?format=json");
+            var response = await client.GetAsync($"");
+            var person = await response.Content.ReadAsAsync<RootPlanet>();
+
+            return person;
         }
         public IActionResult Index()
         {
             return View();
         }
-
+        
         public IActionResult TypeIdent(string perpan)
         {
             if(perpan == "Person")
@@ -46,7 +75,23 @@ namespace SWApiLab23.Controllers
         }
          public IActionResult SelectPerson()
         {
-            
+            var persons = GetRootPerson().Result;
+            return View(persons);
+        }
+        public IActionResult DisplayPerson(int id)
+        {
+            var person = GetRootPerson(id).Result;
+            return View(person);
+        }
+        public IActionResult SelectPlanet()
+        {
+            var planets = GetRootPlanet().Result;
+            return View(planets);
+        }
+        public IActionResult DisplayPlanet(int id)
+        {
+            var person = GetRootPlanet(id).Result;
+            return View(person);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

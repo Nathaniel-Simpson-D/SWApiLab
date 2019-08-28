@@ -5,10 +5,22 @@ using System.Threading.Tasks;
 
 namespace SWApiLab23.Models
 {
-    public class Person
+    
+    public class RootPersonArr
     {
-
-        public class RootPerson
+        public int count { get; set; }
+        public string next { get; set; }
+        public string previous { get; set; }
+        public RootPerson[] results { get; set; }
+    }
+    public class RootPlanetArr
+    {
+        public int count { get; set; }
+        public string next { get; set; }
+        public string previous { get; set; }
+        public RootPlanet[] results { get; set; }
+    }
+    public class RootPerson
         {
             public string name { get; set; }
             public string height { get; set; }
@@ -28,9 +40,7 @@ namespace SWApiLab23.Models
             public string url { get; set; }
         }
 
-    }
-    public class Planet
-    {
+    
 
         public class RootPlanet
         {
@@ -50,5 +60,5 @@ namespace SWApiLab23.Models
             public string url { get; set; }
         }
 
-    }
+    
 }
